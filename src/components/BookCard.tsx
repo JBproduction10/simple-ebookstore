@@ -1,3 +1,4 @@
+import Image from "next/image";
 const cardStyle ={
   width: '200px',
   padding: '1rem',
@@ -12,6 +13,7 @@ const cardStyle ={
 
 const imageStyle = {
   width: '100%',
+  height: '100%',
   aspectRatio: 1,
   borderRadius: '5px',
 };
@@ -34,7 +36,7 @@ const descriptionStyle = {
 const BookCard = ({title, description, coverImage, onClick}: any) => {
   return (
     <div style={cardStyle} onClick={onClick}>
-      <img style={imageStyle} src={coverImage} alt={title} />
+      <Image style={imageStyle} src={coverImage} alt={title} />
       <div style={contentStyle}>
         <h3 style={titleStyle}>{title}</h3>
         <p style={descriptionStyle}>{description}</p>
