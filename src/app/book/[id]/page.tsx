@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 'use client';
 
 import { books } from "@/constants/mockData";
@@ -38,7 +39,7 @@ export default function BookPage(){
         if(savedDom){
             setDom(JSON.parse(savedDom))
         }
-    }, [])
+    }, [selectedBook, setDom])
 
     if(!selectedBook.length) return <p>Book not found</p>
 
